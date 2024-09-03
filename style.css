@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: rgb(225, 242, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    /* height: 100%; */
+}
+
+.container {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 5vh;
+    background-color: white;
+    width: 75vw;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .right {
+    background-color: hsl(200, 24%, 40%);
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0 3rem;
+}
+
+.container .left {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.left .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.left .heading p{
+    cursor: pointer;
+}
+
+.left .account {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.left .account input {
+    font-size: 16px;
+    padding: 15px;
+    border-radius: .4rem;
+    border: 1px solid lightblue;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.left .account input::-webkit-outer-spin-button,
+.left .account input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.left .account input:focus {
+    border-color: hsl(61, 70%, 52%);
+}
+
+.left .account .duration {
+
+    display: flex;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.duration .time p,
+.rate p {
+    padding-bottom: 10px;
+
+    /* display: flex;
+    flex-direction: column;
+    gap: 10px; */
+
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.type label {
+
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+    border: 1px solid lightblue;
+    border-radius: .4rem;
+    display: flex;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.type form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.type label input:checked {
+    background-color: antiquewhite;
+
+}
+
+button {
+    border-radius: 5rem;
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 10px 50px;
+    font-family: "Plus Jakarta Sans";
+    background-color: hsl(61, 70%, 52%);
+    border: none;
+}
+button:hover{
+    background-color: hsl(61, 80%, 72%);
+}
+
+.right {
+    padding: 30px;
+    color: white;
+}
+
+.right .heading {
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans";
+    margin-bottom: 30px;
+}
+
+.right p {
+    color: hsl(202, 86%, 94%);
+    margin-bottom: 10%;
+}
+
+.right .card {
+    width: calc(100%-30px);
+    height: 60%;
+    background-color: hsl(61, 70%, 52%);
+    border-radius: .4rem;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: end;
+
+}
+
+.right .innercard {
+    width: 100%;
+    height: 98%;
+    background-color: hsl(202, 55%, 16%);
+    border-radius: .4rem;
+    padding: 30px;
+}
+
+.right .innercard p {
+    margin-bottom: 2% !important;
+    /* font-size: 45px; */
+}
+
+.right .innercard .main {
+    font-size: 40px;
+    color: hsl(61, 70%, 52%);
+    font-weight: 600;
+}
+
+.right .innercard p {
+    color: hsl(203, 41%, 72%);
+}
+
+.right .innercard hr {
+    margin: 30px 0;
+    color: hsla(203, 41%, 72%, 0.533);
+}
+
+.right .innercard .price {
+    font-size: 25px !important;
+    font-weight: 400;
+    color: white;
+}
+
+@media (max-width:400px) {
+    .container{
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        margin: 0  ;
+    }
+    .container .right {
+        border-radius: 0;
+    }
+    .container .left .duration {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container .left .duration input{
+        width: 100%;
+    }
+    .container .heading {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+    }
+    .container .heading h1{
+        width: 100%;
+        font-size: 26px;
+    }
+   
+}
+@media (max-width:768px) {
+    .container{
+        flex-direction: column;
+        height: 100%;
+    }
+    .container .left .duration {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container .left .duration input{
+        width: 100%;
+    }
+}
+.input-icon {
+    position: relative;
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
+.input-icon i {
+    position: absolute;
+   /* left: 10px; */
+   top: 35%;
+   width: 10vw;
+    transform: translateY(-50%);
+    background-color: lightblue;
+    color: rgb(48, 171, 212);
+    font-size: 30px;
+    padding: 15px;
+}
+
+.input-icon input {
+    width: 100%;
+    padding-left: 35px; /* Adjust based on icon size */
+    font-size: 16px;
+    padding: 15px;
+    border-radius: .4rem;
+    border: 1px solid lightblue;
+    font-weight: bold;
+    outline: none;
+}
